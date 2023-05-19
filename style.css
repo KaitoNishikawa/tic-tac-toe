@@ -30,6 +30,7 @@ body{
 }
 
 #middle{
+    position: relative;
     padding: 30px;
     background-color: #3dbdad;
 }
@@ -68,6 +69,35 @@ body{
     background-color: #3dbdad;
     border: 2px solid #32a192;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+}
+
+#overlay{
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /* background-color: #3dbdad; */
+    transition: opacity 0.5s;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: #545454;
+    font-weight: 500;
+}
+
+#overlay.active{
+    cursor: pointer;
+    opacity: 1;
+    background-color: rgba(61, 189, 173, 0.7);
+    pointer-events: all;
 }
 
 .cell:first-child,
